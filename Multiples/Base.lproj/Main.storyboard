@@ -23,14 +23,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="FIB-pL-hSm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="FIB-pL-hSm">
                                 <rect key="frame" x="20" y="28" width="560" height="131"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FIB-pL-hSm" secondAttribute="height" multiplier="560:131" id="KMb-55-aN4"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Postit" translatesAutoresizingMaskIntoConstraints="NO" id="C2U-ov-WUO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Postit" translatesAutoresizingMaskIntoConstraints="NO" id="C2U-ov-WUO">
                                 <rect key="frame" x="178" y="385" width="245" height="195"/>
                                 <animations/>
                                 <constraints>
@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="width" constant="245" id="wL2-Qj-O9C"/>
                                 </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poF-MI-KGZ" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poF-MI-KGZ" userLabel="PlayButton">
                                 <rect key="frame" x="184" y="441" width="239" height="64"/>
                                 <animations/>
                                 <constraints>
@@ -50,7 +50,7 @@
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dtI-cl-ktt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-fr-Gao" userLabel="AddButton">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-fr-Gao" userLabel="AddButton">
                                 <rect key="frame" x="175" y="378" width="251" height="190"/>
                                 <animations/>
                                 <constraints>
@@ -62,7 +62,7 @@
                                     <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7o-ho-xcK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 + 5 = 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2V-5M-9p4" userLabel="SumText">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="d2V-5M-9p4" userLabel="SumText">
                                 <rect key="frame" x="20" y="33" width="560" height="99"/>
                                 <animations/>
                                 <constraints>
@@ -78,11 +78,25 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Which multiple?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L75-2C-My6" userLabel="MultipleInput">
+                                <rect key="frame" x="231" y="285" width="138" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="FGn-5Y-5iF"/>
+                                    <constraint firstAttribute="height" constant="30" id="kxt-8n-Iol"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dbM-ry-4aB"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="d2V-5M-9p4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5ES-u2-xnE"/>
+                            <constraint firstItem="L75-2C-My6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Xs-ku-XLE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MdC-d4-cu5" secondAttribute="bottom" id="8kD-S3-Vgf"/>
                             <constraint firstItem="d2V-5M-9p4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="ATP-kd-WTe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZqU-fr-Gao" secondAttribute="bottom" constant="32" id="C2q-zL-2kZ"/>
@@ -97,6 +111,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="poF-MI-KGZ" secondAttribute="bottom" constant="95" id="m7w-xq-zqM"/>
                             <constraint firstItem="MdC-d4-cu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mlP-g9-d6e"/>
                             <constraint firstItem="d2V-5M-9p4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rAs-ja-YIV"/>
+                            <constraint firstItem="L75-2C-My6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s87-rL-nCS"/>
                             <constraint firstAttribute="trailing" secondItem="MdC-d4-cu5" secondAttribute="trailing" id="sMa-Ie-DEh"/>
                             <constraint firstItem="MdC-d4-cu5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v9X-FL-M8r"/>
                             <constraint firstItem="FIB-pL-hSm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="y2m-f2-JZP"/>
@@ -110,6 +125,7 @@
                     </view>
                     <connections>
                         <outlet property="addImage" destination="ZqU-fr-Gao" id="fdh-X3-iuY"/>
+                        <outlet property="multipleInput" destination="L75-2C-My6" id="38E-FG-Lef"/>
                         <outlet property="multiplesLogo" destination="FIB-pL-hSm" id="aBy-5d-59P"/>
                         <outlet property="playImage" destination="poF-MI-KGZ" id="gKx-lO-hhb"/>
                         <outlet property="postit" destination="C2U-ov-WUO" id="jVZ-td-Nh3"/>
